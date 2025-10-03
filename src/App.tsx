@@ -170,7 +170,7 @@ function App() {
         >
           <Container maxWidth="xl" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Typography variant="body2" color="text.secondary" align="center">
-              Trip Expense Calculator • Built with React + Material-UI • Calculates train, bus, flight, and car travel costs
+              Trip Expense Calculator • Calculates train, bus, flight, and car travel costs
             </Typography>
             <Typography variant="body2" color="text.secondary" align="center">
               Copyright @Faiz Ahmad 2025
