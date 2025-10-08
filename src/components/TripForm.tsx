@@ -56,7 +56,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Number of Travellers"
             type="number"
             value={trip.travellers}
-            onChange={(e) => updateField('travellers', Math.max(1, parseInt(e.target.value) || 1))}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('travellers', value === '' ? '' : Math.max(1, parseInt(value) || 1));
+            }}
             inputProps={{ min: 1, step: 1 }}
             required
             aria-label="Number of travellers"
@@ -68,7 +71,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Number of Days"
             type="number"
             value={trip.days}
-            onChange={(e) => updateField('days', Math.max(1, parseInt(e.target.value) || 1))}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('days', value === '' ? '' : Math.max(1, parseInt(value) || 1));
+            }}
             inputProps={{ min: 1, step: 1 }}
             required
             aria-label="Number of days"
@@ -117,7 +123,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 label="Fare Per Person"
                 type="number"
                 value={trip.farePerPerson || ''}
-                onChange={(e) => updateField('farePerPerson', parseFloat(e.target.value) || 0)}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  updateField('farePerPerson', value === '' ? '' : parseFloat(value) || 0);
+                }}
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
@@ -257,7 +266,11 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Hotel Rate Per Night"
             type="number"
             value={trip.hotelRatePerNight}
-            onChange={(e) => updateField('hotelRatePerNight', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('hotelRatePerNight', value === '' ? '' : parseFloat(value) || 0);
+
+            }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -272,7 +285,11 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Number of Rooms"
             type="number"
             value={trip.numberOfRooms}
-            onChange={(e) => updateField('numberOfRooms', Math.max(1, parseInt(e.target.value) || 1))}
+            onChange={
+              (e) => {
+                const value = e.target.value;
+                updateField('numberOfRooms', value === '' ? '' : Math.max(1, parseInt(value) || 1));
+              }}
             inputProps={{ min: 1, step: 1 }}
             required
             aria-label="Number of rooms"
@@ -303,7 +320,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Meals Per Day"
             type="number"
             value={trip.mealsPerDay}
-            onChange={(e) => updateField('mealsPerDay', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('mealsPerDay', value === '' ? '' : Math.max(0, parseFloat(value) || 0));
+            }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -329,7 +349,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Local Transport Per Day"
             type="number"
             value={trip.localTransportPerDay}
-            onChange={(e) => updateField('localTransportPerDay', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('localTransportPerDay', value === '' ? '' : Math.max(0, parseFloat(value) || 0));
+            }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -343,7 +366,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Sightseeing Per Day"
             type="number"
             value={trip.sightseeingPerDay}
-            onChange={(e) => updateField('sightseeingPerDay', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('sightseeingPerDay', value === '' ? '' : Math.max(0, parseFloat(value) || 0));
+            }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -357,7 +383,11 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Miscellaneous Per Day"
             type="number"
             value={trip.miscPerDay}
-            onChange={(e) => updateField('miscPerDay', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('miscPerDay', value === '' ? '' : Math.max(0, parseFloat(value) || 0));
+            }
+            }
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -379,7 +409,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Visa Fees"
             type="number"
             value={trip.visaFees || ''}
-            onChange={(e) => updateField('visaFees', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('visaFees', value === '' ? '' : parseFloat(value) || 0);
+            }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -393,7 +426,11 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="SIM / Internet"
             type="number"
             value={trip.simInternet || ''}
-            onChange={(e) => updateField('simInternet', parseFloat(e.target.value) || 0)}
+            onChange={
+              (e) => {
+                const value = e.target.value;
+                updateField('simInternet', value === '' ? '' : parseFloat(value) || 0);
+              }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -407,7 +444,13 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Shopping"
             type="number"
             value={trip.shopping || ''}
-            onChange={(e) => updateField('shopping', parseFloat(e.target.value) || 0)}
+            onChange={
+              (e) => {
+                const value = e.target.value;
+                updateField('shopping', value === '' ? '' : parseFloat(value) || 0);
+              }
+
+            }
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -421,7 +464,11 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Travel Insurance"
             type="number"
             value={trip.travelInsurance || ''}
-            onChange={(e) => updateField('travelInsurance', parseFloat(e.target.value) || 0)}
+            onChange={
+              (e) => {
+                const value = e.target.value;
+                updateField('travelInsurance', value === '' ? '' : parseFloat(value) || 0);
+              }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
@@ -435,7 +482,10 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             label="Other Operational"
             type="number"
             value={trip.otherOperational || ''}
-            onChange={(e) => updateField('otherOperational', parseFloat(e.target.value) || 0)}
+            onChange={(e) => {
+              const value = e.target.value;
+              updateField('otherOperational', value === '' ? '' : parseFloat(value) || 0);
+            }}
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}

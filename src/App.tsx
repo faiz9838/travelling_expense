@@ -69,7 +69,7 @@ function App() {
         <AppBar position="static" elevation={2}>
           <Toolbar>
             <Calculator size={28} style={{ marginRight: 12 }} />
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontSize: { xs: '.6rem', sm: "1rem" } }}>
               Trip Expense Calculator
             </Typography>
             <FormControlLabel
