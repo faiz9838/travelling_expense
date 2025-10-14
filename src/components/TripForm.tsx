@@ -130,7 +130,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
-                inputProps={{ min: 0, step: 0.01 }}
+                inputProps={{ min: 0, step: 1 }}
                 aria-label="Fare per person"
               />
             </Grid>
@@ -144,7 +144,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
-                inputProps={{ min: 0, step: 0.01 }}
+                inputProps={{ min: 0, step: 1 }}
                 helperText="On transport"
                 aria-label="Food on transport per person"
               />
@@ -159,7 +159,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
-                inputProps={{ min: 0, step: 0.01 }}
+                inputProps={{ min: 0, step: 1 }}
                 aria-label="Taxi to station"
               />
             </Grid>
@@ -217,7 +217,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
-                inputProps={{ min: 0, step: 0.01 }}
+                inputProps={{ min: 0, step: 1 }}
                 aria-label="Fuel price per litre"
               />
             </Grid>
@@ -231,7 +231,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
-                inputProps={{ min: 0, step: 0.01 }}
+                inputProps={{ min: 0, step: 1 }}
                 aria-label="Toll and parking charges"
               />
             </Grid>
@@ -245,7 +245,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
                 InputProps={{
                   startAdornment: <InputAdornment position="start">₹</InputAdornment>,
                 }}
-                inputProps={{ min: 0, step: 0.01 }}
+                inputProps={{ min: 0, step: 1 }}
                 helperText="For journey"
                 aria-label="Refreshments cost"
               />
@@ -274,7 +274,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             required
             aria-label="Hotel rate per night"
           />
@@ -327,7 +327,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Meals per day"
           />
         </Grid>
@@ -356,7 +356,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Local transport per day"
           />
         </Grid>
@@ -373,7 +373,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Sightseeing per day"
           />
         </Grid>
@@ -391,7 +391,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Miscellaneous per day"
           />
         </Grid>
@@ -416,7 +416,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Visa fees"
           />
         </Grid>
@@ -434,7 +434,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="SIM and internet costs"
           />
         </Grid>
@@ -454,7 +454,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Shopping budget"
           />
         </Grid>
@@ -472,7 +472,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Travel insurance cost"
           />
         </Grid>
@@ -489,7 +489,7 @@ export default function TripForm({ trip, onChange, label }: TripFormProps) {
             InputProps={{
               startAdornment: <InputAdornment position="start">₹</InputAdornment>,
             }}
-            inputProps={{ min: 0, step: 0.01 }}
+            inputProps={{ min: 0, step: 1 }}
             aria-label="Other operational costs"
           />
         </Grid>
